@@ -17,7 +17,8 @@ my %INPUT_TYPE = (
 );
 
 sub parse_pseudo {
-    my ($self, $pseudo) = @_;
+    my $self = shift;
+	my ($pseudo) = @_;
 
     if (exists $INPUT_TYPE{$pseudo}) {
         return "[\@type='${pseudo}']";
