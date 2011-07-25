@@ -15,8 +15,8 @@ for (qw(checkbox file image password radio reset submit text)) {
 }
 
 is(
-    HTML::Selector::XPath::jQuery->new("div:contains(Foretag)")->to_xpath,
-    q{//div[contains(., 'Foretag')]}
+    HTML::Selector::XPath::jQuery->new(q{div:contains("Företag")})->to_xpath,
+    q{//div[text()[contains(string(.),"Företag")]]}
 );
 
 is(

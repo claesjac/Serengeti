@@ -24,23 +24,6 @@ sub parse_pseudo {
         return "[\@type='${pseudo}']";
     }
 
-    if ($pseudo =~ m{contains\((.*)}) {
-        my $text = $1;
-        if (defined $_[2] && $_[2] =~ /(.*?)\)/) {
-            if (defined $1) {
-                my $got = $1;
-                $_[2] =~ s/$1\)//;
-                $text .= $got;
-            }
-        }
-        else {
-            chop $text if substr($text, -1, 1) eq ")";
-        }
-        
-        $text = substr($text, 1, -1) if $text =~ /^'.*'$/;
-        return qq{[contains(., '$text')]};
-    }
-    
     return;
 }
 
