@@ -5,7 +5,7 @@ use warnings;
 
 use Encode qw();
 use HTML::TreeBuilder::XPath;
-use HTML::Selector::XPath::jQuery;
+use HTML::Selector::XPath::Serengeti;
 use JavaScript;
 use Scalar::Util qw(refaddr);
 use URI;
@@ -201,7 +201,7 @@ sub find {
     # Same in find_first
     $query = Encode::decode('UTF-8', $query);
 
-    my $xpath = $query =~ m!^(?:\.?/|id\()! ? $query : "." . HTML::Selector::XPath::jQuery->new($query)->to_xpath;
+    my $xpath = $query =~ m!^(?:\.?/|id\()! ? $query : "." . HTML::Selector::XPath::Serengeti->new($query)->to_xpath;
     my $nodes = $self->findnodes($xpath);    
                     
     return $nodes;                
@@ -214,7 +214,7 @@ sub find_first {
     
     $query = Encode::decode('UTF-8', $query);
 
-    my $xpath = $query =~ m!^(?:\.?/|id\()! ? $query : "." . HTML::Selector::XPath::jQuery->new($query)->to_xpath;
+    my $xpath = $query =~ m!^(?:\.?/|id\()! ? $query : "." . HTML::Selector::XPath::Serengeti->new($query)->to_xpath;
     my $nodes = $self->findnodes($xpath);    
 
     if ($nodes->size() > 0) {

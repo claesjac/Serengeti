@@ -1,4 +1,4 @@
-package HTML::Selector::XPath::jQuery;
+package HTML::Selector::XPath::Serengeti;
 
 use strict;
 use warnings;
@@ -32,7 +32,7 @@ __END__
 
 =head1 NAME
 
-HTML::Selector::XPath::jQuery - HTML::Selector::XPath subclass with support 
+HTML::Selector::XPath::Serengeti - HTML::Selector::XPath subclass with support 
 for some of the :selectors from jQuery
 
 =cut
