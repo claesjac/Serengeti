@@ -11,7 +11,7 @@ use Serengeti::NotificationCenter;
 use Serengeti::Notifications;
 use Serengeti::Session;
 
-our $VERSION = "0.01";
+our $VERSION = "0.00";
 
 our $DefaultBackend = "Serengeti::Backend::Native";
 
