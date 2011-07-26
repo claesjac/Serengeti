@@ -4,7 +4,7 @@
 
 =head2 INTRO
 
-Serengeti is a web-scraping framework with support for multiple backends 
+Serengeti is a web-scraping framework with planned support for multiple backends 
 exposed to the user via a common JavaScript API. The framework is very 
 similar to a real browser as it exposes window, document, forms the same way 
 as their normally available when scripted in client-side JS.

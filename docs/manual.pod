@@ -3,8 +3,7 @@
 =head1 Serengeti - High-level automation tool for scraping websites.
 
 Serengeti is a framework that lets you scrape websites using JavaScript 
-syntax. It can use various backends such as Selenium or the built-in native 
-client to do its job.
+syntax. 
 
 The tool provides developers with both high-level (think DOM, forms etc) as 
 well as more low-level access (think raw source) of the resources it requests.
